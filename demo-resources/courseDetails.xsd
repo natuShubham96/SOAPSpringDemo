@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://in28minutes.com/courses" xmlns:tns="http://in28minutes.com/courses" elementFormDefault="qualified">
+    <element name="GetCourseDetailsRequest">
+        <complexType>   <!-- complexType tag is used when an element contains other elements inside it -->
+            <sequence>
+                <element name="id" type="integer"></element>  <!-- type is the type of data which this element should have -->
+            </sequence>
+        </complexType>
+    </element>
+    <element name="GetCourseDetailsResponse">
+        <complexType>   <!-- complexType tag is used when an element contains other elements inside it -->
+            <sequence>
+                <element name="CourseDetails" type="tns:CourseDetails"></element>  <!-- type is the type of data which this element should have -->
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="CourseDetails">
+        <sequence>
+            <element name="id" type="integer" />
+            <element name="name" type="string" />
+            <element name="auhtor" type="string" />
+        </sequence>
+    </complexType>
+</schema>
+
+
+
+        <!-- Here, targetNameSpace & xlns:tns should be same as namespace provided in xml files -->
+
